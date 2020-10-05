@@ -1,16 +1,15 @@
-import org.junit.Test;
-import org.junit.jupiter.api.Disabled;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NewTests {
     @Test
-    void firstTest(){
+    void firstTest() {
         assertTrue(true);
 }
 
     @Test
-    void secondTest(){
+    void secondTest() {
         assertTrue(true);
     }
 

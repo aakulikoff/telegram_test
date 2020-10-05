@@ -16,10 +16,7 @@ allure {
 }
 
 test {
-//    systemProperty "chromeoptionp.prefs", "intl.accept_languages=en"
     useJUnitPlatform()
-
-    systemProperty("browser.name", "chrome")
 }
 
 group 'org.example'
@@ -45,13 +42,10 @@ tasks.withType(Test) {
     }
 }
 
-
-
 task bot_test(type: Test) {
     useJUnitPlatform {
     }
 }
-
 
 dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.21'
