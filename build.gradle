@@ -35,6 +35,22 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
+tasks.withType(Test) {
+    systemProperties = System.properties
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task bot(type: Test) {
+    useJUnitPlatform {
+    }
+}
+
 dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.21'
     compile('org.seleniumhq.selenium:selenium-java:3.141.59')
